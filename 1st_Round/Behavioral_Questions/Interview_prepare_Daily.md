@@ -1,179 +1,121 @@
- 
- 
- Review my complete interview video carefully and analyze every question and answer in detail. Evaluate how correctly and confidently I answered each question, where I performed well, where I struggled, and which technical concepts I failed to explain properly. Do not give motivational feedback or soft comments. Be direct, strict, and brutally honest.
+## **1. Introduction to Programming (3 Questions)**
 
-Focus on:
-
-- Accuracy of my answers
+1. Ap apne aap ko backend developer ke tor pe kaise introduce karenge?
     
-- Communication clarity
+2. JavaScript mein variable scope aur hoisting ko simple words mein explain karo.
     
-- Confidence level
-    
-- Response timing and why I answered late
-    
-- Questions where I got stuck or confused
-    
-- Tone, energy, and professionalism
-    
-- Whether I sounded lazy, unsure, or underprepared
-    
-- Technical depth of my answers
+3. Node.js aur Python ke basic syntax aur differences kya hain?
     
 
-Give:
+---
 
-- Score out of 100
-    
-- Section-wise performance breakdown
-    
-- Biggest weaknesses
-    
-- What interviewer likely thought about me
-    
-- What would reduce my hiring chances
-    
-- Exact improvements needed for backend developer interviews
-    
+## **2. OOP Concepts (15 Questions)**
 
-Take your time and review the video deeply question-by-question instead of giving general feedback. I have also provide you question and answer that asked in interview video
- 
- 
- 
- # 7/5/26
-
-# Questions 
-## **Introduction to Programming (4 Questions)**
-
-1. JavaScript aur Python mein difference simple words mein batao.
+4. Node.js ya Python mein class aur object ka difference kya hai?
     
-2. Asynchronous programming Node.js mein kyun important hai?
+5. EV Charging Station project mein aapne authentication ke liye kaunse OOP concepts use kiye?
     
-3. REST API kya hota hai aur backend mein iska role kya hai?
+6. Constructor aur destructor ka use kab aur kyun hota hai?
     
-4. Tumhari coding workflow aur version control kaise handle karte ho?
+7. Polymorphism aur function overloading ko simple example do.
     
-
-## **OOP & Core Concepts (16 Questions)**
-
-5. Object-oriented programming ki 4 basic principles batao aur ek example Node.js mein do.
+8. Inheritance ka use aapne kab kiya apne projects mein?
     
-6. Class aur object mein difference simple example ke saath samjhao.
+9. Access modifiers kya hote hain aur kaise implement kiye Node.js ya PHP mein?
     
-7. Encapsulation ko backend projects mein kaise implement karte ho?
+10. Multi-Turn Chatbot mein encapsulation kaise maintain kiya?
     
-8. Inheritance ka use kab aur kahan karna chahiye backend mein?
+11. Static methods aur variables ka use kab hota hai?
     
-9. Polymorphism ka ek practical example do using JavaScript ya Python.
+12. Friend function aur interface ka difference batao.
     
-10. Abstraction ka matlab aur isko Node.js API design mein kaise use karte ho?
+13. Exception handling implement karte waqt kaunse best practices follow ki?
     
-11. Constructor aur destructor ka concept explain karo.
+14. Pointers ka concept aapko C++ se backend projects mein kab useful laga?
     
-12. Static methods aur instance methods mein difference batao.
+15. Virtual function aur abstract class ka backend projects mein real use case batao.
     
-13. Exception handling backend mein kaise implement karte ho?
+16. Method overriding aur super keyword ka use kaise hota hai?
     
-14. Middleware ko OOP design ke context mein kaise use karte ho Node.js mein?
+17. Abstraction aur encapsulation ko real project scenario ke saath explain karo.
     
-15. Data validation aur sanitization ke liye OOP approach kaise design karte ho?
-    
-16. Singleton pattern kya hai aur backend project mein iska use kahan hoga?
-    
-17. Dependency injection kya hai aur Node.js mein kaise implement karte ho?
-    
-18. Promises aur async/await ko OOP design ke context mein kaise integrate karte ho?
-    
-19. REST API models aur controllers ko OOP principles ke saath kaise design karte ho?
-    
-20. Unit testing OOP-based backend code mein kaise implement karte ho?
+18. OOP mein dependency injection ka concept aur benefits kya hain?
     
 
-## **Frameworks & Tools (16 Questions)**
+---
 
-21. MERN stack mein MongoDB aur Node.js ke beech data flow kaise hota hai?
-    
-22. Express.js ya FastAPI mein routing aur middleware ka difference samjhao.
-    
-23. Laravel Sanctum authentication ka flow simple words mein batao.
-    
-24. Tailwind CSS backend ke liye kyun use kiya jaa sakta hai agar UI bhi manage karna ho?
-    
-25. Git aur GitHub workflow mein pull requests aur branching strategy kaise manage karte ho?
-    
-26. Node.js mein error handling aur logging best practices kya hain?
-    
-27. API performance optimization ke liye tum kya techniques use karte ho?
-    
-28. JWT aur session-based authentication ka difference batao.
-    
-29. Database indexing aur query optimization MERN backend mein kaise implement karte ho?
-    
-30. CORS problem backend mein kyun aata hai aur kaise solve karte ho?
-    
-31. Webhooks aur event-driven architecture ka backend mein kya role hai?
-    
-32. Firestore ya MariaDB mein data consistency maintain karne ka approach kya hai?
-    
-33. Python ke libraries (like Pandas/Requests) backend tasks mein kaise help karte hain?
-    
-34. Payment gateway integration (Stripe) secure kaise karte ho?
-    
-35. API versioning ka importance kya hai?
-    
-36. Node.js aur Python ke asynchronous tasks compare karo in real-world backend use.
-    
+## **3. Frameworks & Backend Concepts (15 Questions)**
 
-## **Project-Based / Scenario Questions (24 Questions)**
-
-37. Multi-turn AI chatbot ke response handling ke liye backend mein session kaise manage karoge?
+19. Node.js event loop ka concept explain karo simple words mein.
     
-38. AI chatbot ke user feedback aur analytics ko database mein structure kaise karoge?
+20. Express.js mein middleware ka role kya hai?
     
-39. EV Charging Station ke battery slot management ke liye efficient database design kaise karoge?
+21. REST API design ke best practices kya follow karte ho?
     
-40. Stripe-based multi-role authentication aur payment workflow design kaise karoge?
+22. FastAPI ya Laravel mein routing aur controllers kaise organize kiye projects mein?
     
-41. Ecommerce price watchdog agent ke liye product data extraction ka strategy kya hogi?
+23. Database connection pooling kya hoti hai aur Node.js mein kaise implement hoti hai?
     
-42. AI agent ko irrelevant data filter karne ke liye backend logic kaise implement karoge?
+24. JWT authentication aur session-based authentication mein kya difference hai?
     
-43. Notification system aur alerts design karte waqt scalability kaise ensure karte ho?
+25. API rate limiting aur throttling implement karne ka method batao.
     
-44. Real-time updates (websocket ya polling) EV Charging Station ke backend mein kaise handle karoge?
+26. Error handling aur logging aap projects mein kaise manage karte ho?
     
-45. MongoDB mein user activity logging ka efficient structure kya hoga?
+27. Caching ka backend performance pe kya effect hota hai?
     
-46. API rate limiting aur throttling multi-user scenario mein kaise implement karoge?
+28. Stripe payment integration ke flow ko simple steps mein explain karo.
     
-47. Realtime chatbot analytics ke liye database aur caching kaise optimize karoge?
+29. ORM ka use kyu kiya aur Prisma ya Eloquent ORM ke advantages kya hain?
     
-48. Multi-platform price comparison backend design ka approach kya hoga?
+30. Real-time communication ke liye WebSocket ya socket.io ko kab aur kyun use karte ho?
     
-49. Laravel aur Node.js project mein token-based authentication aur authorization kaise handle karte ho?
+31. Environment variables aur config management backend projects mein kaise handle karte ho?
     
-50. Pre-booking aur reservation system backend design ke liye schema kaise plan karoge?
+32. Dependency management aur package.json ka role kya hai Node.js projects mein?
     
-51. API testing aur Postman workflow projects mein kaise implement karte ho?
-    
-52. AI chatbot ke performance metrics measure karne ke liye backend architecture kaise design karoge?
-    
-53. Product variants aur pricing changes ko handle karne ke liye automated backend workflow kaise set karoge?
-    
-54. Real-world backend debugging aur logging multi-module projects mein kaise karte ho?
-    
-55. User roles aur permissions EV Charging Station app mein kaise manage karoge?
-    
-56. Ecommerce agent ke product alerts aur historical price logging ka schema design karo.
-    
-57. Scalable notification system design chatbot ya EV projects ke liye kaise hota hai?
-    
-58. Open-source contribution ke liye API documentation best practices kya hain?
-    
-59. Multi-project backend development mein API versioning aur conflict handling kaise karte ho?
-    
-60. Tumhari expected salary aur joining timeline kya hai?
-    
+33. Async/await aur promises ka backend workflow mein kya importance hai?
     
 
- # 8/5/26
+---
+
+## **4. Projects & Scenario-Based Questions (15 Questions)**
+
+34. EV Charging Station project mein slot booking ka backend flow batao.
+    
+35. PriceWatch Dog project mein multiple APIs se data fetch karte waqt concurrency kaise handle kiya?
+    
+36. Multi-Turn Chatbot mein conversation state kaise maintain hota hai?
+    
+37. Users aur Admin ke roles ke liye authentication & authorization flow design kaise kiya?
+    
+38. Stripe integration ke dauran security issues ko kaise handle kiya?
+    
+39. MongoDB ya MySQL mein schema design ka decision kab aur kaise liya?
+    
+40. EV Charging Station project mein transaction monitoring ka backend logic batao.
+    
+41. PriceWatch Dog project ke alerts system ka backend architecture explain karo.
+    
+42. Multi-Turn Chatbot mein performance analytics module ka backend design kaise kiya?
+    
+43. Backend API versioning aur backward compatibility kaise maintain karte ho?
+    
+44. Project ke during data validation aur sanitization kaise implement ki?
+    
+45. Large number of concurrent users ke liye system design mein kya considerations liye?
+    
+46. EV Charging Station project mein pre-booking aur slot availability ko race conditions se kaise bachaya?
+    
+47. Multi-Turn Chatbot ke error handling aur fallback responses kaise design kiye?
+    
+48. PriceWatch Dog ke backend mein historical data analysis aur trend reporting kaise manage ki?
+    
+49. Security audits aur vulnerability scanning ko backend projects mein kaise implement karte ho?
+    
+
+---
+
+## **5. Job/Salary Expectation & Wrap-Up (2 Questions)**
+
+50. Aap junior backend role mein apne skills ko 6 months ya 1 year mein kaise grow karoge?

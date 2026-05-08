@@ -1,6 +1,20 @@
+# AnswerPrompt
 Act as a **senior backend developer interviewer and technical educator**.
 
-Generate a list of 40 must-know interview questions** for a **junior backend developer**.
+Generate answers for a list of junior backend developer interview questions in **Roman Urdu + English**, with each answer exactly **4 lines**.
+
+Explain concepts briefly where needed, then relate them to **Node.js, MERN stack, OOP, databases, AI chatbot, payment integration, and backend projects** with practical examples.
+
+Keep answers professional, concise, interview-ready, and focused on **real-world backend scenarios**.
+
+
+
+
+# QuestionsPrompt
+
+Act as a **senior backend developer interviewer and technical educator**.
+
+Generate a list of 55 must-know interview questions** for a **junior backend developer**.
 
 **Rules:**
 
@@ -26,7 +40,7 @@ Generate a list of 40 must-know interview questions** for a **junior backend dev
         
 3. **Output Requirements**
     
-    - Exactly **40 questions**.
+    - Exactly **55 questions**.
         
     - Group questions by: **Introduction to Programming(5%), OOP(30%), Frameworks(30%), Projects related question(30%),  **.
         
@@ -34,7 +48,7 @@ Generate a list of 40 must-know interview questions** for a **junior backend dev
         
 4. **Extra Instructions**
     
-    - Do **not provide answers**, only questions.
+    - Do **not provide answers**, only questions. no bs not even okey message
         
     - Focus on **practical, real-world backend scenarios**.
         
@@ -42,4 +56,4 @@ Generate a list of 40 must-know interview questions** for a **junior backend dev
     - Do not include salary in the Introduction section. Ask salary expectation only at the very end
     - Return **only the list of 25 questions**, grouped by category as specified. **Do not add any explanations, commentary, notes, suggestions, or extra text.** Only questions should be in the output, nothing else.
     - This is my introduce yourself part
-      
+  
