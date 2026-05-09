@@ -4,9 +4,6 @@
 
 This repository is a **complete backend developer interview preparation guide**. It organizes all essential topics, frameworks, programming languages, and technical interview concepts in a structured way for systematic learning. The goal is to **prepare for technical rounds, behavioral questions, and framework-specific knowledge**, including API development, authentication, databases (SQL/NoSQL), and object-oriented programming.
 
-> **Recommended Tool:**
-> Use **[Obsidian](https://obsidian.md/)** to read, edit, and organize your markdown notes. Obsidian allows you to create linked notes, search topics easily, and maintain a knowledge base for all interview preparation material.
-
 ---
 
 ## Complete Folder Structure
