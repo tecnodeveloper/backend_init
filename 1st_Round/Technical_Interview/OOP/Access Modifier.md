@@ -57,24 +57,6 @@ int main() {
 }
 ```
 
- Correct way:
-
-```cpp
-class Demo {
-private:
-    int x;
-
-public:
-    void setX(int val) {
-        x = val;
-    }
-
-    int getX() {
-        return x;
-    }
-};
-```
-
 ---
 
 ## 5. Protected Access Specifier
@@ -131,25 +113,8 @@ Think of a **mobile phone**:
 - **Private** → Internal circuits (hidden)
 - **Protected** → System settings (only accessible by advanced/system-level access)
 ---
-## 9. Common Mistakes
 
-### 1. Forgetting Default is Private
-
-```cpp
-class Test {
-    int x; // private by default
-};
-```
-
----
-
-### 2. Trying to Access Private Data Directly
-
-```cpp
-obj.x = 10; //  Error
-```
-
- Use getter/setter functions instead
+-  Use getter/setter functions instead
 
 ---
 
@@ -173,9 +138,6 @@ Making everything public defeats **encapsulation**
 
 - **What is an access specifier?**  
     → A keyword that defines visibility of class members
-    
-- **Default access in C++ class?**  
-    → `private`
     
 - **Difference between private and protected?**  
     → Protected is accessible in derived classes, private is not

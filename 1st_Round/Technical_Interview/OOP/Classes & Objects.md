@@ -11,21 +11,6 @@
 
 ---
 
-## 2. Why Do Classes and Objects Exist?
-
-Before OOP, programs were written using functions and variables separately, which made large systems:
-
-- Hard to manage
-- Difficult to scale
-- Error-prone
-### Classes solve this by:
-
-- Grouping **data (variables)** and **behavior (functions)** together
-- Providing **abstraction** and **encapsulation**
-- Making code reusable and modular
-
----
-
 ## 3. Mental Model
 
 Imagine a **Car Factory**:
@@ -39,27 +24,6 @@ Imagine a **Car Factory**:
     - A blue car
 
 Each car is independent but follows the same blueprint.
-
----
-
-## 4. Basic Syntax
-
-```javascript
-class ClassName {
-public:
-    // Data members (variables)
-    int value;
-
-    // Member functions (methods)
-    void functionName() {
-        // code
-    }
-};
-
-int main() {
-    ClassName obj; // Object creation
-}
-```
 
 ---
 
@@ -159,80 +123,8 @@ int main() {
 - Class = **no memory allocated**
 - Object = **memory allocated**
 
-```javascript
-Student s1;
-```
-
-- Allocates memory for:
-    - `name`
-    - `age`
-
 Each object has **its own copy** of data members.
 
----
-
-## 9. Edge Cases and Pitfalls
-
-### 1. Uninitialized Objects
-
-```javascript
-Student s1;
-cout << s1.age; // Garbage value
-```
-
- Fix:
-
-```javascript
-Student s1{};
-```
-
----
-
-### 2. Accessing Private Members
-
- Incorrect:
-
-```javascript
-class Test {
-private:
-    int x;
-};
-
-Test t;
-t.x = 10; // Error
-```
-
- Fix:
-
-```javascript
-public:
-    void setX(int val) {
-        x = val;
-    }
-```
-
----
-
-### 3. Forgetting Access Specifier
-
-Default in C++ class = **private**
-
-```javascript
-class A {
-    int x; // private by default
-};
-```
-
----
-
-## 10. Common Mistakes (With Fixes)
-
-|Mistake|Problem|Fix|
-|---|---|---|
-|Not initializing members|Garbage values|Use constructors|
-|Using private members directly|Compilation error|Use public methods|
-|Confusing class vs object|Logic error|Remember: class = blueprint|
-|Not creating object|No execution|Instantiate class|
 
 ---
 
@@ -257,18 +149,7 @@ class A {
 | Example    | `class Car`      | `Car c1;`     |
 
 ---
-## 14. Advanced Insight
 
-- Classes support:
-    - **Encapsulation**
-    - **Inheritance**
-    - **Polymorphism**
-    - **Abstraction**
-    
-- Objects enable:
-    - Real-world modeling
-    - Data isolation
-    - Scalable architecture
 
 ---
 
@@ -288,11 +169,3 @@ class A {
 - **Why use classes?**  
     → For modularity, reusability, and abstraction.
 
----
-
-## 16. Final Summary
-
-- Class = Recipe
-- Object = Dish
-- Many dishes can be made from one recipe
-- Each dish is independent
