@@ -1,4 +1,4 @@
-# Stack, Queue, Heap in C++
+# Stack, Queue, Heap(SQH)
 
 ---
 
@@ -87,12 +87,9 @@ First inserted element is removed first.
 
 ## 2.2 Why Queue Exists
 
-- Fair processing
-    
-- Task scheduling
-    
-- Request handling
-    
+- Fair processing    
+- Task schedulin    
+- Request handling    
 
 ---
 
@@ -100,8 +97,7 @@ First inserted element is removed first.
 
 Think of a **line at a shop**:
 
-- First person served first
-    
+- First person served first    
 
 ---
 
@@ -125,19 +121,6 @@ class Queue {
 
 ---
 
-## 2.5 Example
-
-```javascript
-const q = new Queue();
-
-q.enqueue("A");
-q.enqueue("B");
-
-console.log(q.dequeue()); // A
-```
-
----
-
 ## 2.6 Step-by-Step
 
 ```text
@@ -151,30 +134,16 @@ Dequeue → removes A
 
 ## 2.7 Real-World Use
 
-- API request queue
-    
-- CPU scheduling
-    
-
----
-
-## 2.8 Common Mistakes
-
-❌ Using pop instead of shift  
-✔ Always remove from front
+- API request queue    
+- CPU scheduling    
 
 ---
 
 ## 2.9 Key Points
 
-- FIFO
-    
-- Used in scheduling
-    
-- Order matters
-    
-
----
+- FIFO    
+- Used in scheduling    
+- Order matters    
 
 ---
 
@@ -186,19 +155,15 @@ Dequeue → removes A
 
 A **Heap** is a special tree structure where:
 
-- **Min Heap** → smallest at root
-    
-- **Max Heap** → largest at root
-    
+- **Min Heap** → smallest at root    
+- **Max Heap** → largest at root    
 
 ---
 
 ## 3.2 Why Heap Exists
 
-- Efficient priority access
-    
-- Used in algorithms like shortest path
-    
+- Efficient priority access    
+- Used in algorithms like shortest path    
 
 ---
 
@@ -206,8 +171,7 @@ A **Heap** is a special tree structure where:
 
 Think of a **priority system**:
 
-- Highest priority comes first
-    
+- Highest priority comes first    
 
 ---
 
@@ -260,28 +224,16 @@ Extract → 2
 
 ## 3.7 Real-World Use
 
-- Task priority systems
-    
-- Dijkstra algorithm
-    
-
----
-
-## 3.8 Common Mistakes
-
-❌ Assuming heap is sorted  
-✔ Only root is guaranteed min/max
+- Task priority systems    
+- Dijkstra algorithm   
 
 ---
 
 ## 3.9 Key Points
 
-- Complete binary tree
-    
-- Fast min/max access
-    
-- Not fully sorted
-    
+- Complete binary tree    
+- Fast min/max access    
+- Not fully sorted    
 
 ---
 
@@ -297,14 +249,10 @@ Extract → 2
 
 # 6. Common Mistakes (All)
 
-- Confusing LIFO vs FIFO
-    
-- Assuming heap is sorted
-    
-- Ignoring null in trees
-    
-- Using wrong operations
-    
+- Confusing LIFO vs FIFO    
+- Assuming heap is sorted    
+- Ignoring null in trees    
+- Using wrong operations    
 
 ---
 
@@ -314,54 +262,34 @@ Extract → 2
 
 ### What Interviewers Expect:
 
-- Clear differences
-    
-- Real-world usage
-    
-- Implementation basics
-    
-- Time complexity
-    
+- Clear differences    
+- Real-world usage    
+- Implementation basics    
+- Time complexity    
 
 ---
 
 ### Common Questions:
 
-- Stack vs Queue difference
-    
-- Heap vs BST
-    
-- Tree traversal types
-    
-- Use cases
-    
+- Stack vs Queue difference    
+- Heap vs BST    
+- Tree traversal types    
+- Use cases    
 
 ---
 
 # 8. Interview Summary
 
-- Stack → LIFO
-    
-- Queue → FIFO
-    
-- Heap → Priority-based tree
-    
-- Tree → Hierarchical structure
-    
+- Stack → LIFO    
+- Queue → FIFO    
+- Heap → Priority-based tree    
+- Tree → Hierarchical structure    
 
 ---
 
 # 9. Final Mental Model
 
-- Stack → pile
-    
-- Queue → line
-    
-- Heap → priority system
-    
+- Stack → pile    
+- Queue → line    
+- Heap → priority system    
 - Tree → hierarchy
-    
-
----
-
-These structures form the foundation of **algorithms, system design, and efficient problem solving in C++ and beyond**.
