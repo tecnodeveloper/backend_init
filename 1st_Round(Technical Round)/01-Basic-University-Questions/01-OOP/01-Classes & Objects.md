@@ -4,18 +4,18 @@
 
 ##  Definition
 
-- A **class** is a blueprint or template - Think of a class as a **design**
-- An **object** is an instance of a class - Object as the **actual item** created from that design
+- A **class** is a [blueprint](https://www.urdupoint.com/dictionary/english-to-urdu/blueprint-meaning-in-urdu/11199.html) or template - Think of a class as a **design**
+- An **object** is an [instance](https://www.urdu2eng.com/instance-urdu-meanings.html)) of a class - Object as the **actual item** created from that design
 
 ---
 
-## 3. Mental Model
+##  Mental Model
 
 Imagine a **Car Factory**:
 
 - **Class = Car Blueprint**
-    - Defines properties: color, speed
-    - Defines behaviors: accelerate(), brake()
+    - Defines properties: color, speed called Members
+    - Defines behaviors: accelerate(), brake() called Methods
 
 - **Object = Actual Car**
     - A red car
@@ -59,7 +59,7 @@ int main() {
 4. `s1.display()` calls function
 
 ---
-## 7. Real-World Example
+## Real-World Example
 
 ### Example: Bank Account System
 
@@ -111,7 +111,7 @@ int main() {
 
 ---
 
-## 8. Internal Behavior
+## Internal Behavior
 
 ### What happens in memory?
 
@@ -123,7 +123,7 @@ Each object has **its own copy** of data members.
 
 ---
 
-## 11. Key Points
+## Key Points
 
 - Class = blueprint
 - Object = instance
@@ -134,7 +134,7 @@ Each object has **its own copy** of data members.
 
 ---
 
-## 12. Comparison Table
+## Comparison Table
 
 | Concept    | Class            | Object        |
 | ---------- | ---------------- | ------------- |
@@ -148,7 +148,7 @@ Each object has **its own copy** of data members.
 
 ---
 
-## 15. Interview Tips / Summary
+## Interview Tips / Summary
 
 ### Must-Know Answers:
 
