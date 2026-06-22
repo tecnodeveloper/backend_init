@@ -16,6 +16,5 @@ int main()
     zain.rollNo = 230201330;
     salman.rollNo = 12;
     zain.studying();
-
     return 0;
 }

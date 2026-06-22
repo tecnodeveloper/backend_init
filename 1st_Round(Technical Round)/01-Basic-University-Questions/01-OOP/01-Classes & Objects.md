@@ -28,35 +28,32 @@ Each car is independent but follows the same blueprint.
 ### Example: Simple Class and Object
 
 ```c++
-class Student {
-public:
-    string name;
-    int age;
-
-    void display() {
-        cout << "Name: " << name << endl;
-        cout << "Age: " << age << endl;
-    }
+class student{
+    public:
+        int rollNo;
+        string Name;
+        string ClassName;
+    void studying(){
+        cout<<"Student is studying";
+    }
 };
-
-int main() {
-    Student s1;  // Object creation
-
-    s1.name = "Ali";
-    s1.age = 20;
-
-    s1.display();
-
-    return 0;
+int main()
+{
+    student zain;
+    student salman;
+    zain.rollNo = 230201330;
+    salman.rollNo = 12;
+    zain.studying();
+    return 0;
 }
 ```
 
 ### Step-by-Step Breakdown
 
 1. `class Student` defines structure
-2. `s1` is an object
-3. `s1.name` assigns data
-4. `s1.display()` calls function
+2. `zain` is an object
+3. `zain.name` assigns data
+4. `zain.display()` calls function
 
 ---
 ## Real-World Example
@@ -64,42 +61,47 @@ int main() {
 ### Example: Bank Account System
 
 ```javascript
-#include <iostream>
-using namespace std;
+class Bank{
+    private:
+        double balance;
+    public:
+    Bank(int IntialBalance){
+        balance = IntialBalance;
+    }
 
-class BankAccount {
-private:
-    double balance;
+    void deposit(){
+        int depositMoney = 0;
+        cout<<"Enter the money for deposit \n";
+        cin>>depositMoney;
+        if(depositMoney > 0){
+            balance = balance + depositMoney;
+            cout<<depositMoney<<" money is succussfully deposited. Your current balance is "<<balance<<endl;
+        }else{
+            cout<<"Please enter the correct number to deposit "<<" is not correct number"<<endl;
+        }
+    }
 
-public:
-    BankAccount(double b) {
-        balance = b;
-    }
-
-    void deposit(double amount) {
-        balance += amount;
-    }
-
-    void withdraw(double amount) {
-        if (amount <= balance)
-            balance -= amount;
-        else
-            cout << "Insufficient funds" << endl;
-    }
-
-    void display() {
-        cout << "Balance: " << balance << endl;
-    }
+    void withdraw(){
+        int withdrawMoney = 0;
+        cout<<"Enter the money for withdraw"<<endl;
+        cin>>withdrawMoney;
+        if(withdrawMoney < balance){
+            balance = balance - withdrawMoney;
+            cout<<withdrawMoney<<" money is succussfully withdraw. Your current balance is "<<balance<<endl;
+        }else{
+            cout<<"Please enter the correct money for withdraw "<<withdrawMoney<<" is not correct number"<<endl;
+        }
+    }
+    void display(){
+        cout<<"Your current balance is "<<balance<<endl;
+    }
 };
 
-int main() {
-    BankAccount acc(1000);
-
-    acc.deposit(500);
-    acc.withdraw(200);
-    acc.display();
-
-    return 0;
+int main(){
+    Bank account(1000);
+    account.display();
+    account.deposit();
+    account.withdraw();
 }
 ```
 

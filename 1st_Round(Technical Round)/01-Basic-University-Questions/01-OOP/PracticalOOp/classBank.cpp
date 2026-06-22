@@ -1,17 +1,21 @@
 #include<iostream>
 using namespace std;
 class Bank{
-    public:
+    private:
         double balance;
+    public:
+    Bank(int IntialBalance){
+        balance = IntialBalance;
+    }
     void deposit(){
-        int money = 0;
+        int depositMoney = 0;
         cout<<"Enter the money for deposit \n";
         cin>>depositMoney;
         if(depositMoney > 0){
-            cout<<"Your money is succussfully deposit "<<depositMoney<<endl;
-            balance = depositMoney;
+            balance = balance + depositMoney;
+            cout<<depositMoney<<" money is succussfully deposited. Your current balance is "<<balance<<endl;
         }else{
-            cout<<"Please enter the correct number to deposit "<<depositMoney<<endl;
+            cout<<"Please enter the correct number to deposit "<<" is not correct number"<<endl;
         }
     }
     void withdraw(){
@@ -19,10 +23,10 @@ class Bank{
         cout<<"Enter the money for withdraw"<<endl;
         cin>>withdrawMoney;
         if(withdrawMoney < balance){
-            cout<<"You have succussfully withdraw money "<<withdraw<<endl;
             balance = balance - withdrawMoney;
+            cout<<withdrawMoney<<" money is succussfully withdraw. Your current balance is "<<balance<<endl;
         }else{
-            cout<<"Please enter the correct money for withdraw "<<withdrawMoney<<endl;
+            cout<<"Please enter the correct money for withdraw "<<withdrawMoney<<" is not correct number"<<endl;
         }
     }
     void display(){
@@ -30,5 +34,8 @@ class Bank{
     }
 };
 int main(){
-
+    Bank account(1000);
+    account.display();
+    account.deposit();
+    account.withdraw();
 }

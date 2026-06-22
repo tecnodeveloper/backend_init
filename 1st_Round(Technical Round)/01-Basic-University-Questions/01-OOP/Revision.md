@@ -1,5 +1,12 @@
-class is blueprint MAP
-Object is an instance Building
+class is blueprint like Map of building
+Object is an instance like Real physical Building
+
+---
+Encapsulation is like binding data and functions in class So that direct access na ho We use private access specifier for data. 
+Inheritence means child class has acquire properties of parent class through extend keyword.
+
+
+
 
 ---
 
