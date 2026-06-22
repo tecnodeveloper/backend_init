@@ -105,11 +105,11 @@ Examples:
 
 Defines how many entities relate:
 
-|Type|Meaning|
-|---|---|
-|1:1|One-to-one|
-|1:N|One-to-many|
-|N:M|Many-to-many|
+| Type | Meaning      |
+| ---- | ------------ |
+| 1:1  | One-to-one   |
+| 1:N  | One-to-many  |
+| N:M  | Many-to-many |
 
 ###  School Management System
 

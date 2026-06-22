@@ -131,7 +131,7 @@ Example: Dog **is an** Animal
 
 # Polymorphism
 
-Polymorphism means **one interface, multiple implementations**.
+Polymorphism means[ **one interface, multiple implementations**](https://translate.google.com/?hl=en&sl=auto&tl=ur&text=One%20interface%20multiple%20implementation&op=translate).
 
 - it may be compile time polymorphism like Function overloading and Runtime polymorphism like function overriding.
 
@@ -146,25 +146,34 @@ Same action, different behavior:
 
 ---
 
-## Example Polymorphism (P)
+## Example Polymorphism
 
 ```cpp
 
-class Shape {
-public:
-    virtual void draw() { std::cout << "Drawing a shape.\n"; }
+class addValue{
+    private:
+        int number1;
+        int number2;
+    public:
+    addValue(int value1, int value2){
+        number1 = value1;
+        number2 = value2;
+    }
+    void sum(int number1, int number2){
+        cout<<"Integer Sum function call "<<endl;
+        cout<<"The sum of value is "<<number1 + number2<<endl;
+    }
+    void sum(double number1, double number2){
+        cout<<"Float sum function call "<<endl;
+        cout<<"The sum value is "<<number1 + number2<<endl;
+    }
 };
 
-class Circle : public Shape {
-public:
-    void draw() override { std::cout << "Drawing a circle.\n"; }
-};
+int main(){
+    addValue adding(2,2);
+    adding.sum(3.212 , 3.112);
+//  adding.sum(12,2.12321); if we send one parameter as integer and other float then float value is truncated so we use function overloading A function can exist in multiple form.
 
-int main() {
-    Shape* myShape = new Circle();
-    myShape->draw();
-    delete myShape;
-    return 0;
 }
 ```
 
@@ -182,7 +191,6 @@ int main() {
 
 1. Define common method in base class
 2. Override in subclasses
-3. Call same method dynamically
 
 ---
 
