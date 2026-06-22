@@ -4,10 +4,8 @@
 
 ##  Definition
 
-- A **class** is a blueprint or template for creating objects.
-- An **object** is an instance of a class — a real, usable entity built from that blueprint.
-
- Think of a class as a **design** and an object as the **actual item** created from that design.
+- A **class** is a blueprint or template - Think of a class as a **design**
+- An **object** is an instance of a class - Object as the **actual item** created from that design
 
 ---
 
@@ -29,10 +27,7 @@ Each car is independent but follows the same blueprint.
 
 ### Example: Simple Class and Object
 
-```javascript
-#include <iostream>
-using namespace std;
-
+```c++
 class Student {
 public:
     string name;
