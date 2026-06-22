@@ -193,7 +193,7 @@ console.log("End")
 
 - Synchronous → blocking  
 - Asynchronous → non-blocking (handled using Event Loop, Call Stack, and Callback Queue)  
-  → See: [[Event Loop]], [[Call Stack]], [[Event Queue]]
+  → See: [[Event Loop]], [[18-Call Stack]], [[Event Queue]]
 
 ---
 

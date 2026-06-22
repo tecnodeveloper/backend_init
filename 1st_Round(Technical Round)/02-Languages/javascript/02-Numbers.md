@@ -125,7 +125,7 @@ parseFloat("10.75px") // 10.75
 # Math Object
 
 JavaScript provides a built-in **Math object** for calculations.
-refer [[Math Object]]
+refer [[13-Math Object]]
 
 ---
 

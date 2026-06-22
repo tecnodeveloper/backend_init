@@ -147,14 +147,14 @@ user = {} // Error
 
 # Hoisting Relationship
 
-All three declarations are affected by **[[Hoisting]]**, but they behave differently.
+All three declarations are affected by **[[16-Hoisting]]**, but they behave differently.
 
 - `var` is hoisted and initialized with `undefined`
 - `let` and `const` are hoisted but remain in the **Temporal Dead Zone (TDZ)** until initialization
 
 To understand this behavior in detail see:
 
-→ [[Hoisting]]
+→ [[16-Hoisting]]
 
 ---
 

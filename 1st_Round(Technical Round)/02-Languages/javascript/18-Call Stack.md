@@ -107,7 +107,7 @@ Each function in the stack has its own execution context:
 - Function scope  
 - this keyword  
 
-→ Related: [[Execution Context]]
+→ Related: [[17-Execution Context]]
 
 ---
 

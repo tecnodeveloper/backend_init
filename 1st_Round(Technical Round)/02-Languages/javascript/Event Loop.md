@@ -16,7 +16,7 @@ It continuously checks the call stack and the callback queue, and moves tasks to
 - Executes synchronous code  
 - Works in LIFO (Last In First Out) order  
 
-→ See: [[Call Stack]]
+→ See: [[18-Call Stack]]
 
 
 ---

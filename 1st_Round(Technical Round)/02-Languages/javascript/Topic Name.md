@@ -1,10 +1,10 @@
  ## 1. Fundamentals
-- [[let vs var vs const]]
+- [[15-let vs var vs const]]
 - [[01-Data Types]]
 - [[10-null vs undefined]]
 - [[08-Type Conversions]]
-- [[Hoisting]]
-- [[use strict]]
+- [[16-Hoisting]]
+- [[14-use strict]]
 
 ## 2. Strings & Numbers
 - [[03-Strings]]

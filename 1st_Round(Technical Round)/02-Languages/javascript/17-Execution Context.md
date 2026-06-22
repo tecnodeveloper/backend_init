@@ -104,7 +104,7 @@ test()
 - These contexts are pushed onto the Call Stack  
 - When execution completes, they are removed  
 
-→ Related: [[Call Stack]]
+→ Related: [[18-Call Stack]]
 
 ---
 
@@ -238,4 +238,4 @@ ReferenceError
 
 Execution Contexts are managed using the Call Stack.
 
-→ Continue: [[Call Stack]]
+→ Continue: [[18-Call Stack]]

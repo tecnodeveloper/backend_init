@@ -95,7 +95,7 @@ function greet() {
 ### Hoisting
 - Can be called before declaration  
 
-👉 Detailed explanation: [[Hoisting#^54928a]]
+👉 Detailed explanation: [[16-Hoisting#^54928a]]
 
 ---
 
@@ -131,7 +131,7 @@ const greet = function () {
 ### Hoisting
 - Cannot be called before declaration  
 
-👉 Detailed explanation: [[Hoisting#^dc5e30]]
+👉 Detailed explanation: [[16-Hoisting#^dc5e30]]
 
 ---
 
@@ -164,7 +164,7 @@ const greet = () => {
 ### Behavior
 - Does not have its own `this`  
 
-→ [[Arrow functions]]
+→ [[21-Arrow functions]]
 
 ---
 
@@ -199,7 +199,7 @@ function greet(name, callback) {
 ### Behavior
 - Executed after main function completes  
 
-→ [[CallBack Functions]]
+→ [[20-CallBack Functions]]
 
 ---
 
@@ -233,7 +233,7 @@ const user1 = new User("John")
 ### Behavior
 - `this` refers to new object  
 
-→ [[Constructor Functions]]
+→ [[24-Constructor Functions]]
 
 ---
 
@@ -265,7 +265,7 @@ function greet() {
 ### Behavior
 - Explicitly sets `this`  
 
-→ [[Call Apply Bind]]
+→ [[23-Call Apply Bind]]
 
 ---
 
