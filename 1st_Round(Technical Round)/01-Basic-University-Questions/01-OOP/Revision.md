@@ -23,6 +23,8 @@ Exception handling is used to handle unexpected errors that may lead to program 
 
 ---
 
+Function overloading means same name of function but different parameter
+Function overriding means derived class has it's implementation of inherited parent function
 
 ---
 

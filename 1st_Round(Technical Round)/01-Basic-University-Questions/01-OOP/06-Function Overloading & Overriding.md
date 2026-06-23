@@ -49,39 +49,15 @@ Compiler chooses function based on:
 - Order of arguments
 
 ---
-
-## Common Mistake
-
-### Wrong
-
-```cpp
-int show();
-double show();
-```
-
-This causes an error. Why?
-
-Return type alone cannot overload functions.
-### Correct
-
-```cpp
-int show(int x);
-double show(double x);
-```
-
----
-
 # Function Overriding
 
-> A derived class provides its own implementation of  inherited parent class function.
+A derived class provides its own implementation of  inherited parent class function.
 
 ---
 
 ## Example
 
 ```cpp
-#include <iostream>
-using namespace std;
 
 class Animal
 {
@@ -104,7 +80,6 @@ public:
 int main()
 {
     Animal* a = new Dog();
-
     a->sound();
 }
 ```
@@ -134,69 +109,10 @@ Runtime looks up the table and calls the correct function.
 
 ---
 
-## Common Mistake
-
-### Wrong
-
-```cpp
-class Dog : public Animal
-{
-public:
-    void sound(int x)
-    {
-        cout << "Bark";
-    }
-};
-```
-
-This is NOT overriding.
-
-This is overloading.
-
----
-
-### Correct
-
-```cpp
-void sound() override
-{
-    cout << "Bark";
-}
-```
-
----
-
 # Operator Overloading
 
 
-> Built-in operators to work with user-defined classes.
-
----
-
-## Why Needed?
-
-Built-in types support:
-
-```cpp
-int a = 5;
-int b = 10;
-
-int c = a + b;
-```
-
-Custom classes do not.
-
-Without operator overloading:
-
-```cpp
-Complex c3 = c1.add(c2);
-```
-
-With operator overloading:
-
-```cpp
-Complex c3 = c1 + c2;
-```
+Built-in operators to work with user-defined classes.
 
 ---
 
@@ -411,41 +327,6 @@ A derived class redefines a virtual function from the base class.
 
 Redefining the behavior of existing operators for user-defined types.
 
-### Which Concepts Provide Compile-Time Polymorphism?
-
-- Function Overloading
-- Operator Overloading
-
-### Which Concept Provides Runtime Polymorphism?
-
-- Function Overriding
-
-### Why is `virtual` Important?
-
-It enables dynamic dispatch through the vtable mechanism.
-
-### How Does `a + b` Work for Objects?
-
-Compiler converts:
-
-```cpp
-a + b
-```
-
-into:
-
-```cpp
-a.operator+(b);
-```
-
-or
-
-```cpp
-operator+(a, b);
-```
-
-depending on implementation.
-
 ---
 
 # Final Mental Model
@@ -490,5 +371,3 @@ Overloading
 Overriding
     └── Runtime Polymorphism
 ```
-
-> Function Overloading, Function Overriding, and Operator Overloading are three different mechanisms that allow C++ programs to express polymorphic behavior while keeping code readable, maintainable, and closer to real-world problem modeling.

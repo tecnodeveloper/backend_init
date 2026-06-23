@@ -1,4 +1,4 @@
-# Virtual Function & Static Class (C++ OOP)
+# Virtual Function & Static Class 
 
 ---
 

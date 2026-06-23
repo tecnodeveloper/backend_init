@@ -11,7 +11,7 @@ class Complex{
         }
     // Overloading syntax of + operator for addition of imaginary and complex
     friend Complex operator + (const Complex& obj1, const Complex& obj2 ){
-        Complex temp;
+//        Complex temp;
         temp.real = obj1.real + obj2.real;
         temp.imag = obj1.imag + obj2.imag;
         return temp;
