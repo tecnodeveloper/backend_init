@@ -588,4 +588,768 @@ Output:
 Engine started
 ```
 
-Send **"part 2"** for the next section.
+# Part 2: Composition and Aggregation in C++
+
+---
+
+# 16. Composition Lifecycle
+
+One of the most important characteristics of Composition is:
+
+> The contained object's lifetime depends on the owner object's lifetime.
+
+If the parent object is destroyed, its composed objects are also destroyed.
+
+---
+
+## Example
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class Engine
+{
+public:
+    Engine()
+    {
+        cout << "Engine Created" << endl;
+    }
+
+    ~Engine()
+    {
+        cout << "Engine Destroyed" << endl;
+    }
+};
+
+class Car
+{
+private:
+    Engine engine;
+
+public:
+    Car()
+    {
+        cout << "Car Created" << endl;
+    }
+
+    ~Car()
+    {
+        cout << "Car Destroyed" << endl;
+    }
+};
+
+int main()
+{
+    Car car;
+}
+```
+
+### Output
+
+```text
+Engine Created
+Car Created
+Car Destroyed
+Engine Destroyed
+```
+
+---
+
+## Internal Behavior
+
+When:
+
+```cpp
+Car car;
+```
+
+is created:
+
+```text
+Car
+ └── Engine
+```
+
+The Engine object is automatically created.
+
+When Car is destroyed:
+
+```text
+Car Destroyed
+Engine Destroyed
+```
+
+The Engine cannot outlive the Car.
+
+---
+
+# 17. Real-World Composition Examples
+
+---
+
+## Computer and CPU
+
+```cpp
+class CPU
+{
+public:
+    void process()
+    {
+        cout << "Processing..." << endl;
+    }
+};
+
+class Computer
+{
+private:
+    CPU cpu;
+
+public:
+    void run()
+    {
+        cpu.process();
+    }
+};
+```
+
+---
+
+## House and Rooms
+
+```cpp
+class Room
+{
+};
+
+class House
+{
+private:
+    Room room1;
+    Room room2;
+    Room room3;
+};
+```
+
+Rooms are part of the house.
+
+---
+
+## Order and Order Items
+
+```cpp
+class OrderItem
+{
+};
+
+class Order
+{
+private:
+    vector<OrderItem> items;
+};
+```
+
+If the order disappears, its items disappear as well.
+
+---
+
+# 18. Aggregation
+
+## Definition
+
+Aggregation is an OOP relationship where one object uses another object, but does not own it.
+
+In simple terms:
+
+> Aggregation = "has-a" relationship with weak ownership.
+
+The child object can exist independently of the parent.
+
+---
+
+# Why Aggregation Exists
+
+Sometimes objects need to collaborate without ownership.
+
+Examples:
+
+- University has Students
+    
+- Team has Players
+    
+- Department has Employees
+    
+
+If the parent is destroyed, the child objects still exist.
+
+---
+
+# Mental Model
+
+Think of:
+
+```text
+University
+    ├── Student A
+    ├── Student B
+    └── Student C
+```
+
+If the University closes:
+
+```text
+Students still exist.
+```
+
+Unlike Composition, lifetime is independent.
+
+---
+
+# 19. Aggregation Example
+
+## Student and University
+
+```cpp
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+class Student
+{
+public:
+    string name;
+
+    Student(string n)
+    {
+        name = n;
+    }
+};
+
+class University
+{
+private:
+    vector<Student*> students;
+
+public:
+    void addStudent(Student* student)
+    {
+        students.push_back(student);
+    }
+
+    void showStudents()
+    {
+        for (auto student : students)
+        {
+            cout << student->name << endl;
+        }
+    }
+};
+
+int main()
+{
+    Student s1("Ali");
+    Student s2("Ahmed");
+
+    University university;
+
+    university.addStudent(&s1);
+    university.addStudent(&s2);
+
+    university.showStudents();
+}
+```
+
+### Output
+
+```text
+Ali
+Ahmed
+```
+
+---
+
+# 20. Aggregation Lifecycle
+
+Observe:
+
+```cpp
+Student s1("Ali");
+Student s2("Ahmed");
+```
+
+Students are created independently.
+
+Then:
+
+```cpp
+university.addStudent(&s1);
+```
+
+The University simply stores references/pointers.
+
+It does NOT own them.
+
+---
+
+## Visualization
+
+```text
+Student Ali
+Student Ahmed
+
+        ▲
+        │
+        │
+University
+```
+
+The University points to Students.
+
+Students exist independently.
+
+---
+
+# 21. Composition vs Aggregation
+
+|Feature|Composition|Aggregation|
+|---|---|---|
+|Ownership|Strong|Weak|
+|Lifetime Dependency|Yes|No|
+|Child Exists Independently|No|Yes|
+|Relationship Type|Part Of|Uses|
+|Memory Management|Owner Controls|External Control|
+|Coupling|Stronger|Looser|
+
+---
+
+# 22. Composition Example vs Aggregation Example
+
+## Composition
+
+```cpp
+class Engine
+{
+};
+
+class Car
+{
+private:
+    Engine engine;
+};
+```
+
+Engine belongs to Car.
+
+---
+
+## Aggregation
+
+```cpp
+class Engine
+{
+};
+
+class Car
+{
+private:
+    Engine* engine;
+
+public:
+    Car(Engine* e)
+    {
+        engine = e;
+    }
+};
+```
+
+Engine exists separately and is provided to Car.
+
+---
+
+# 23. Real-World Backend Examples
+
+---
+
+## Composition: E-Commerce Order System
+
+```cpp
+class OrderItem
+{
+};
+
+class Order
+{
+private:
+    vector<OrderItem> items;
+};
+```
+
+Order owns its items.
+
+If Order is deleted:
+
+```text
+Order Items are deleted too.
+```
+
+---
+
+## Aggregation: Company and Employees
+
+```cpp
+class Employee
+{
+};
+
+class Company
+{
+private:
+    vector<Employee*> employees;
+};
+```
+
+Employees can exist without a company.
+
+They may move to another company.
+
+---
+
+# 24. Real-World Game Development Examples
+
+---
+
+## Composition
+
+```cpp
+class Weapon
+{
+};
+
+class Player
+{
+private:
+    Weapon weapon;
+};
+```
+
+Weapon is tightly coupled to Player.
+
+---
+
+## Aggregation
+
+```cpp
+class Weapon
+{
+};
+
+class Player
+{
+private:
+    Weapon* weapon;
+};
+```
+
+Weapon can be shared or transferred.
+
+---
+
+# 25. Common Mistakes
+
+## Mistake 1: Confusing Composition with Aggregation
+
+### Wrong Understanding
+
+```cpp
+class Car
+{
+    Engine* engine;
+};
+```
+
+Many developers assume this is Composition.
+
+Not necessarily.
+
+A pointer usually indicates Aggregation because the object may exist independently.
+
+---
+
+## Mistake 2: Ownership Confusion
+
+### Problem
+
+```cpp
+class University
+{
+    Student* student;
+};
+```
+
+Who deletes Student?
+
+The ownership is unclear.
+
+---
+
+### Better
+
+Use smart pointers when ownership matters.
+
+```cpp
+std::unique_ptr<Student>
+```
+
+for Composition.
+
+```cpp
+Student*
+```
+
+or
+
+```cpp
+std::shared_ptr<Student>
+```
+
+for Aggregation.
+
+---
+
+## Mistake 3: Overusing Inheritance
+
+### Wrong Design
+
+```cpp
+class Car : public Engine
+{
+};
+```
+
+A Car is NOT an Engine.
+
+---
+
+### Correct Design
+
+```cpp
+class Car
+{
+private:
+    Engine engine;
+};
+```
+
+A Car HAS an Engine.
+
+---
+
+# 26. Internal Behavior
+
+## Composition
+
+```text
+Car
+ └── Engine
+```
+
+Memory Layout:
+
+```text
+Car Object
+ ├── Engine Data
+ └── Car Data
+```
+
+Engine is embedded inside Car.
+
+---
+
+## Aggregation
+
+```text
+Car
+ └── Engine*
+```
+
+Memory Layout:
+
+```text
+Car Object
+ ├── Pointer
+ └── Car Data
+
+Engine Object
+ └── Separate Memory
+```
+
+Engine lives elsewhere.
+
+---
+
+# 27. Composition and Aggregation Together
+
+Large systems often use both.
+
+Example:
+
+```cpp
+class Address
+{
+};
+
+class Employee
+{
+private:
+    Address address; // Composition
+};
+
+class Company
+{
+private:
+    vector<Employee*> employees; // Aggregation
+};
+```
+
+Relationship:
+
+```text
+Company
+    Aggregates Employees
+
+Employee
+    Composes Address
+```
+
+---
+
+# Key Points
+
+- Composition represents strong ownership.
+    
+- Aggregation represents weak ownership.
+    
+- Composition objects cannot exist independently.
+    
+- Aggregation objects can exist independently.
+    
+- Composition usually stores objects directly.
+    
+- Aggregation usually stores pointers or references.
+    
+- Composition creates tighter coupling.
+    
+- Aggregation provides greater flexibility.
+    
+
+---
+
+# Interview Summary
+
+### What is Composition?
+
+A "has-a" relationship where one object owns another object and controls its lifetime.
+
+Example:
+
+```cpp
+class Car
+{
+    Engine engine;
+};
+```
+
+---
+
+### What is Aggregation?
+
+A "has-a" relationship where one object uses another object without owning it.
+
+Example:
+
+```cpp
+class Car
+{
+    Engine* engine;
+};
+```
+
+---
+
+### Main Difference?
+
+Composition:
+
+```text
+Child cannot exist without Parent.
+```
+
+Aggregation:
+
+```text
+Child can exist without Parent.
+```
+
+---
+
+### Which Provides Strong Ownership?
+
+```text
+Composition
+```
+
+---
+
+### Which Provides Weak Ownership?
+
+```text
+Aggregation
+```
+
+---
+
+# Final Mental Model
+
+```text
+Composition
+    = Owns Object
+    = Part Of Relationship
+    = Strong Ownership
+
+Examples:
+Car → Engine
+House → Room
+Computer → CPU
+Order → OrderItem
+```
+
+```text
+Aggregation
+    = Uses Object
+    = Independent Relationship
+    = Weak Ownership
+
+Examples:
+University → Student
+Company → Employee
+Team → Player
+Library → Book
+```
+
+```text
+HAS-A Relationship
+        │
+        ▼
+ ┌──────────────┐
+ │ Composition  │
+ │ Owns Object  │
+ └──────────────┘
+
+ ┌──────────────┐
+ │ Aggregation  │
+ │ Uses Object  │
+ └──────────────┘
+```
+
+> Composition and Aggregation are two ways to model "has-a" relationships in C++. Composition implies ownership and lifetime dependency, while Aggregation represents association without ownership, allowing objects to exist independently.
