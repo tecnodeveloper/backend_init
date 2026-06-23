@@ -1,99 +1,5 @@
 # Function Overloading, Overriding, and Operator Overloading
 
-C++ supports polymorphism through:
-
-1. **Function Overloading** → Same function name, different parameters.
-2. **Function Overriding** → Same function signature, different implementation in a derived class.    
-3. **Operator Overloading** → Same operator, different behavior for user-defined types.
-
----
-
-# Why Do These Concepts Exist?
-
-Without these features, developers would need many different names for similar operations.
-
-### Without Polymorphism
-
-```cpp
-calculateInt();
-calculateDouble();
-calculateFloat();
-
-addComplex();
-addVector();
-addMoney();
-```
-
-This becomes difficult to maintain.
-
-### With Polymorphism
-
-```cpp
-calculate(10);
-calculate(10.5);
-
-complex1 + complex2;
-vector1 + vector2;
-
-shape.draw();
-```
-
----
-
-# Mental Model
-
-Think of polymorphism as a **single button with multiple behaviors**.
-
-### Function Overloading
-
-Same button → Different inputs
-
-```text
-Print()
-Print(int)
-Print(string)
-```
-
----
-
-### Function Overriding
-
-Same button → Different object
-
-```text
-Animal -> sound()
-
-Dog -> sound()
-Cat -> sound()
-Bird -> sound()
-```
-
----
-
-### Operator Overloading
-
-Same operator → Different object type
-
-```text
-5 + 10          -> Integer Addition
-
-complex1 + complex2
-vector1 + vector2
-money1 + money2
-```
-
----
-
-# Types of Polymorphism in C++
-
-|Type|Mechanism|Binding Time|
-|---|---|---|
-|Function Overloading|Compile-Time|Early Binding|
-|Operator Overloading|Compile-Time|Early Binding|
-|Function Overriding|Runtime|Late Binding|
-
----
-
 # Function Overloading
 
 Multiple functions having the same name but different parameter lists.
@@ -204,66 +110,7 @@ int main()
 ```
 
 ---
-
-## Step-by-Step Execution
-
-### Step 1
-
-```cpp
-Animal* a = new Dog();
-```
-
-Pointer type:
-
-```cpp
-Animal*
-```
-
-Actual object:
-
-```cpp
-Dog
-```
-
----
-
-### Step 2
-
-```cpp
-a->sound();
-```
-
-Compiler sees:
-
-```cpp
-sound()
-```
-
-is virtual.
-
----
-
-### Step 3
-
-Runtime checks actual object type.
-
-Object is:
-
-```cpp
-Dog
-```
-
-Therefore:
-
-```cpp
-Dog::sound()
-```
-
-is executed.
-
----
-
-## Internal Behavior (vtable)
+## Internal Behavior 
 
 Most C++ compilers use:
 
@@ -319,11 +166,8 @@ void sound() override
 
 ---
 
-# 3. Operator Overloading
+# Operator Overloading
 
-## Definition
-
-Operator overloading allows:
 
 > Built-in operators to work with user-defined classes.
 
@@ -356,31 +200,9 @@ Complex c3 = c1 + c2;
 
 ---
 
-## Syntax
-
-```cpp
-ReturnType operatorSymbol(parameters)
-{
-    // logic
-}
-```
-
-Example:
-
-```cpp
-Complex operator+(const Complex& obj)
-{
-    // logic
-}
-```
-
----
-
 ## Example
 
 ```cpp
-#include <iostream>
-using namespace std;
 
 class Complex
 {
@@ -422,25 +244,6 @@ Output:
 ```
 
 ---
-
-## Internal Behavior
-
-Compiler converts:
-
-```cpp
-c1 + c2
-```
-
-into:
-
-```cpp
-c1.operator+(c2);
-```
-
-The operator is actually a special function.
-
----
-
 # Real-World Examples
 
 ## Function Overloading: Backend API Service
@@ -502,27 +305,7 @@ More readable than:
 
 ```cpp
 salary.add(bonus);
-```
-
----
-
-## Operator Overloading: Game Development
-
-```cpp
-Vector2D position;
-Vector2D velocity;
-
-position = position + velocity;
-```
-
-Used extensively in:
-
-- Game engines
-    
-- Physics simulations
-    
-- Graphics systems
-    
+```    
 
 ---
 
@@ -538,64 +321,6 @@ Used extensively in:
 |Polymorphism Type|Static|Dynamic|Static|
 |Uses Virtual Function|No|Yes|No|
 |Scope|Same class|Parent-child classes|User-defined classes|
-
----
-
-# Common Mistakes
-
-## Function Overloading
-
-### Wrong
-
-```cpp
-int display();
-double display();
-```
-
-### Fix
-
-```cpp
-int display(int x);
-double display(double x);
-```
-
----
-
-## Function Overriding
-
-### Wrong
-
-```cpp
-void show(int x);
-```
-
-Parameter mismatch creates overloading.
-
-### Fix
-
-```cpp
-void show() override;
-```
-
----
-
-## Operator Overloading
-
-### Wrong
-
-```cpp
-Complex operator+(Complex c)
-```
-
-Creates unnecessary copy.
-
-### Fix
-
-```cpp
-Complex operator+(const Complex& c)
-```
-
-Use constant reference.
 
 ---
 
@@ -669,7 +394,6 @@ Operators should represent intuitive actions.
 - Operator overloading improves readability for custom types.
     
 - Not all operators can be overloaded (`::`, `.`, `?:`, `sizeof`).
-    
 
 ---
 
@@ -690,14 +414,11 @@ Redefining the behavior of existing operators for user-defined types.
 ### Which Concepts Provide Compile-Time Polymorphism?
 
 - Function Overloading
-    
 - Operator Overloading
-    
 
 ### Which Concept Provides Runtime Polymorphism?
 
 - Function Overriding
-    
 
 ### Why is `virtual` Important?
 
