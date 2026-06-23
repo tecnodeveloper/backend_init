@@ -2,8 +2,6 @@
 
 **Exception handling** in C++ is a mechanism to handle **runtime errors** (unexpected situations) in a controlled way, preventing program crashes.
 
-> It allows you to separate **error-handling code** from normal logic.
-
 ---
 ## Mental Model
 
@@ -12,14 +10,15 @@ Think of exception handling like a **safety net**:
 - Code runs normally
 - If something goes wrong → control jumps to handler
 - Program recovers instead of crashing
+- It allows you to separate **error-handling code** from normal logic.
 
 ---
 
-## Core Syntax (Concept in JS Style)
+## Core Syntax 
 
 ```javascript
 try {
-  // risky code
+  // risky code thow error to catch block
 } catch (error) {
   // handle error
 } finally {
@@ -53,8 +52,6 @@ try {
 - `try` → risky code
 - `throw` → generate error
 - `catch` → handle error
-- Prevents crashes
-- Improves code structure
 
 ---
 

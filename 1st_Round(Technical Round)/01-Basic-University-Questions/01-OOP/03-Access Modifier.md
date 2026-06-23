@@ -58,8 +58,7 @@ int main() {
 ##  Protected Access Specifier
 
    Members declared as **protected**:
-    - Can be accessed inside the class
-    - Can also be accessed by **derived (child) classes**
+    - Can be accessed inside the class or child classes
     - Cannot be accessed from outside
 
 ### Example:
@@ -74,8 +73,13 @@ class Derived : public Base {
 public:
     void setX() {
         x = 20; // Allowed
+        cout<<x;
     }
 };
+int main(){
+	Derived objDerived;
+	objDerived.setX();
+}
 ```
 
 ---

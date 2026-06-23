@@ -21,45 +21,23 @@ public:
     int value;
 
     // Constructor
-    Example(int v) {
-        value = v;
-        cout << "Constructor called\n";
+    Example(int value) {
+        this->value = value;
+        cout << "Constructor called and object values are intialized ";
     }
 
     // Destructor
     ~Example() {
-        cout << "Destructor called\n";
+        cout << "Destructor called";
     }
 };
+int main(){
+    Example exampleObject(2);
+}
 ```
 
 
 ---
-
-``` C++
-
-## 8. Real-World Example (Database Connection)
-
-```cpp
-
-class DatabaseConnection {
-public:
-    string connectionString;
-
-    DatabaseConnection(string conn) {
-        connectionString = conn;
-        cout << "Connected to DB\n";
-    }
-
-    ~DatabaseConnection() {
-        cout << "Disconnected from DB\n";
-    }
-};
-
-int main() {
-    DatabaseConnection db("localhost");
-}
-```
 
 ## Key Points
 
@@ -78,10 +56,6 @@ Constructor = **object initialization**
 
 # Destructor
 
----
-
-## Definition
-
 A destructor is used to **release resources automatically** when an object is destroyed.
 
 ---
@@ -95,6 +69,32 @@ A destructor is used to **release resources automatically** when an object is de
 
 ---
 
+``` C++
+
+## 8. Real-World Example (Database Connection)
+
+```cpp
+
+class DatabaseConnection {
+public:
+    string connection;
+
+    DatabaseConnection(string connection) {
+        this->connection = connection;
+        cout << "Connected to DB ";
+    }
+
+    ~DatabaseConnection() {
+        cout << "Disconnected from DB ";
+    }
+};
+
+int main() {
+    DatabaseConnection db("localhost");
+}
+```
+
+---
 ## Interview Tip
 
 Destructor = **automatic cleanup**
@@ -103,13 +103,13 @@ Destructor = **automatic cleanup**
 
 #  Constructor vs Destructor
 
-|Feature|Constructor|Destructor|
-|---|---|---|
-|Purpose|Initialize object|Clean resources|
-|Execution|On creation|On destruction|
-|Name|Class name|~ClassName|
-|Parameters|Allowed|Not allowed|
-|Overloading|Yes|No|
+| Feature     | Constructor       | Destructor      |
+| ----------- | ----------------- | --------------- |
+| Purpose     | Initialize object | Clean resources |
+| Execution   | On creation       | On destruction  |
+| Name        | ClassName         | ~ClassName      |
+| Parameters  | Allowed           | Not allowed     |
+| Overloading | Yes               | No              |
 
 ---
 

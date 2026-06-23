@@ -6,17 +6,15 @@ Encapsulation is like binding data and functions in class So that direct access 
 Inheritence means child class has acquire properties of parent class through extend keyword.
 polymorphism means one interface multiple implementation like function overloading at compile time and function overriding at runtime
 
-
-
 ---
 
-public access to everywhere
-private access to inside the class
+public can access by everywhere
+private can access only inside the class
 protected access by module level
 
 ---
 
-Constructor is special function that is used to intialize the functions value
+Constructor is special function that is used to intialize the object value
 Destructor is used to clean up memory resources that is allocated by object
 
 ---
