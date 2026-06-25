@@ -1,11 +1,5 @@
 # Four Pillars of OOP
 
----
-
-## Definition
-
-Object-Oriented Programming (OOP) is a programming paradigm based on the concept of **objects** which bundle **data (variables)** and **behavior (functions)** together.
-
 The **four pillars of OOP** are EIPA:
 
 1. **Encapsulation**

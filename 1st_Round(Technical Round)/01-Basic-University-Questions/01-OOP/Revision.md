@@ -11,9 +11,10 @@ class is blueprint like Map of building
 Object is an instance like Real physical Building
 
 ---
-Encapsulation is like binding data and functions in class So that direct access na ho We use private access specifier for data. 
+Encapsulation is like binding data and functions in class So that direct access of data is not possible using private access specifier. 
 Inheritence means child class has acquire properties of parent class through extend keyword.
-polymorphism means one interface multiple implementation like function overloading at compile time and function overriding at runtime
+polymorphism means one interface multiple implementation like function overloading at compile time and function overriding at runtime.
+Abstraction is hiding complex functionality and showing neccessary functionality.
 
 ---
 

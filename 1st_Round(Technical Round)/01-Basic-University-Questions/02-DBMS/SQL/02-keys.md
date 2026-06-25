@@ -327,10 +327,9 @@ PRIMARY KEY (name)
     - Difference between **candidate vs primary key**
     - Why **indexes matter**
 - Common question:
-    
-    > "Can a table have multiple primary keys?"  
-    >  No, only one (can be composite)
-    
+	- "Can a table have multiple primary keys?" 
+	- No, only one (can be composite)
+   
 
 ---
 
@@ -347,5 +346,3 @@ PRIMARY KEY (name)
     - Backend systems
     - APIs
     - Real-world data modeling
-
----
