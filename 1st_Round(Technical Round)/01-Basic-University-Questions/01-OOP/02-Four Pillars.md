@@ -8,7 +8,6 @@ The **four pillars of OOP** are EIPA:
 4. **Abstraction**
 
 ---
-
 # Encapsulation
 
 Encapsulation is the concept of wrapping data members (variables) and member functions (function) together inside a class and restricting direct access to the data.
@@ -66,7 +65,6 @@ Encapsulation = **data hiding + controlled access**
 Inheritance is a mechanism in which a Child Class acquires the properties of Parent class using extend keyword
 
 ---
-
 ## Mental Model
 
 Parent → Child relationship:
@@ -76,7 +74,7 @@ Parent → Child relationship:
 
 ---
 
-## Example Inheritance
+## Example
 
 ```cpp
 
@@ -87,7 +85,7 @@ public:
 
 class Dog : public Animal {
 public:
-    void bark() { cout << "Woof!"; }
+    void eat() { cout << "eating!"; }
 };
 
 int main() {
@@ -115,7 +113,6 @@ int main() {
 3. Override methods if needed
 
 ---
-
 ## Interview Tip
 
 Inheritance = **“is-a” relationship**
@@ -140,7 +137,7 @@ Same action, different behavior:
 
 ---
 
-## Example Polymorphism
+## Example
 
 ```cpp
 
@@ -235,7 +232,7 @@ public:
 class EspressoMachine : public CoffeeMachine {
 public:
     void makeCoffee() override {
-        std::cout << "Pouring Espresso Shot!\n";
+       cout << "Pouring Espresso Shot!\n";
     }
 };
 
@@ -264,7 +261,6 @@ int main() {
 4. Hide actual logic from user
 
 ---
-
 ## Interview Tip
 
 Abstraction = **Hide complexity, expose essentials**
@@ -288,16 +284,3 @@ Abstraction = **Hide complexity, expose essentials**
 - **Inheritance** → Reuse code
 - **Polymorphism** → Flexible behavior
 - **Abstraction** → Hide complexity
-
----
-
-# Interview Summary
-
-- OOP is about structuring code using objects
-- Four pillars work **together**, not separately
-- Always explain with **real-world analogy**
-- Mention:
-  - Encapsulation = data hiding
-  - Inheritance = reuse
-  - Polymorphism = flexibility
-  - Abstraction = hiding complexity

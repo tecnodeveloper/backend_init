@@ -1,4 +1,3 @@
-
 #  Access Specifiers in C++
 
 **Access specifiers** control **who can access the data and functions** of a class.
@@ -14,7 +13,6 @@ C++ has **three main access specifiers**:
 - `protected`
 
 ---
-
 ##  Public Access Specifier
 
  Members declared as **public** can be accessed **from anywhere** in the program.

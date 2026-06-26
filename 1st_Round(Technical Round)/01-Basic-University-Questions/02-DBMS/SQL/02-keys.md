@@ -1,4 +1,4 @@
-##   Definition
+# Key
 
 **Keys in DBMS are attributes (or sets of attributes) used to uniquely identify records (rows)** in a table and **establish relationships** between tables.
 
