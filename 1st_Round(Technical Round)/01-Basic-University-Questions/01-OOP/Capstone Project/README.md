@@ -8,7 +8,7 @@ C++ Program to store books for library. As admin you can create books, edit them
 
 ## Schema Design
 
-![Schema](img/ER-Diagram%20of%20LibraryManagementSystem.png)
+![Schema](img/libraryManagementSystem-ER-Digaram.jpg)
 
 ## Project Flow
 

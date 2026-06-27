@@ -32,13 +32,21 @@ int main(){
     cout<<"Press 2 to 'Login as User' \n";
     cout<<"Press 3 to 'Exit Program' \n";
     cin>>dashboardinput;
-    if(dashboardinput == 1 || dashboardinput == 2 || dashboardinput == 3){
-        
-    }else{
-        while (dashboardinput == 1 || dashboardinput == 2 || dashboardinput == 3) {
-               
+    while (condition) {
+        if(dashboardinput == 1 || dashboardinput == 2 || dashboardinput == 3){
+            if(dashboardinput == 1){
+                cout<<"Welcome admin";
+            }else if(dashboardinput == 2){
+                cout<<"Welcome user";
+            }else{
+                cout<<"Exit program";
+            }
+        }else{
+           cout<<"\nPress any number 1, 2, 3 to choose option";
+           cin>>dashboardinput;
         }
     }
+ 
         
     
 
