@@ -1,0 +1,44 @@
+- javascript
+- python
+- RAG
+- supabase
+- Mern Stack
+- FastAPi
+- Linux
+- Git/Github
+- Session based authentication
+- prompt engineering
+- google OAuth
+- session management
+- analytics module
+- performance metrices
+- topic classification
+- response accuracy
+- user feedback
+- Nextjs
+- llama3
+- reactjs
+- gemini api
+- postgressSQL
+- react architecture
+- user defined metrices
+- content extraction
+- Beautifull soap
+- MultiTenat user management system
+- llm
+- logging
+- stripe based payment
+- battery slot management
+- postman
+- pull request 
+- bug fixes
+- Restful api 
+- documentation
+- technical article 
+- medium
+- web services
+- database system
+- information security
+- oop
+- computer networks
+- operating system

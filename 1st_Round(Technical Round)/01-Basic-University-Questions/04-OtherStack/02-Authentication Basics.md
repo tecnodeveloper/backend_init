@@ -89,7 +89,8 @@ function login(username, password) {
 
 **Fix: Use hashing**
 
-```javascript
+javascript
+
 import bcrypt from "bcryptjs";
 
 const users = [];

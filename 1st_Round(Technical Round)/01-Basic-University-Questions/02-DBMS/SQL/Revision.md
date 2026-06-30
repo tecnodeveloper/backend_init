@@ -3,6 +3,8 @@
 ---
 
 ER-diagram is the design diagram of database schema before writing single line of sql query
+Generalization is the concept of top down approach 
+specialization is bottom up approach
 
 --- 
 
@@ -21,7 +23,9 @@ tablename -> just write table name
 ---
 
 joins are used to connect two rows from two tables
+functional depende
 
 ---
 
-functional dependency is used 
+indexing is used to fast the process of data reterival. if you think of common data that can be reterived very commonly you can put indexing on them
+normalization is used for data integrity. it ensure data consistency, maintainable and scalable.
